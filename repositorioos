@@ -1,3 +1,8 @@
 SELECT titulo FROM livros;
 
 SELECT nome From autores WHERE year (nascimento) <1900;
+
+SELECT livros.titulo
+FROM livros
+INNER JOIN autores ON livros.autor_id = autores.id
+WHERE autores.nome = 'J.K. Rowling'; //terceiro
